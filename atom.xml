@@ -6,7 +6,7 @@
   <link href="https://liwenjun327.github.io/atom.xml" rel="self"/>
   
   <link href="https://liwenjun327.github.io/"/>
-  <updated>2021-03-20T10:15:19.551Z</updated>
+  <updated>2021-03-26T06:47:55.991Z</updated>
   <id>https://liwenjun327.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网络数据爬虫简介</title>
+    <link href="https://liwenjun327.github.io/2021/03/25/htmlunit1/"/>
+    <id>https://liwenjun327.github.io/2021/03/25/htmlunit1/</id>
+    <published>2021-03-25T10:10:16.000Z</published>
+    <updated>2021-03-26T06:47:55.991Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;序言&quot;&gt;&lt;a href=&quot;#序言&quot; class=&quot;headerlink&quot; title=&quot;序言&quot;&gt;&lt;/a&gt;序言&lt;/h2&gt;&lt;p&gt;最近工作上都忙于采集各系统的数据，所以也是在数据爬虫方面进行了学习，今天也是抽空出来记录下。&lt;/p&gt;
+&lt;h2 id=&quot;概念&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="数据爬虫" scheme="https://liwenjun327.github.io/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/"/>
+    
+    
+    <category term="HtmlUnit" scheme="https://liwenjun327.github.io/tags/HtmlUnit/"/>
+    
+    <category term="Java" scheme="https://liwenjun327.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>新的一年新的开始</title>

@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>网络数据爬虫简介</title>
+      <link href="/liwj.github.io/2021/03/25/htmlunit1/"/>
+      <url>/liwj.github.io/2021/03/25/htmlunit1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>最近工作上都忙于采集各系统的数据，所以也是在数据爬虫方面进行了学习，今天也是抽空出来记录下。</p><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>爬虫（程序）</strong>、<strong>自动化</strong>、<strong>抓取数据</strong>。<br>通俗的讲就是利用程序自动化获取想要的数据进行存储。</p><h2 id="相关技术"><a href="#相关技术" class="headerlink" title="相关技术"></a>相关技术</h2><p>现在比较常见的有Jsoup、HtmlUnit、Httpclient等，以下简单介绍下。</p><ul><li><p>Jsoup<br>jsoup是一个用于处理真实HTML的Java库。它提供了一个非常方便的API，用于提取和操作数据，使用最好的DOM，CSS和类似jquery的方法。<br>优点：轻量级框架，静态页面Dom解析异常简单,操作也是时候简单，知道Jquery的使用基本就能快速上手。<br>缺点：只能解析静态网页，无法支持页面js。</p></li><li><p>HtmlUnit（强烈推荐）<br>HtmlUnit是一款java的无界面浏览器程序库，它为HTML文档建模，并提供一个API，使您可以调用页面，填写表单，单击链接等，就像在“常规”浏览器中一样。<br>它具有相当不错的JavaScript支持（正在不断改进），并且甚至可以与非常复杂的AJAX库一起工作，根据所使用的配置来模拟Chrome，Firefox或Internet Explorer。<br>优点：能执行JavaScript、AJAX解析，模仿点击页面操作完成一系列指令。<br>缺点：选择器有点难用，JavaScript容易报错。</p></li><li><p>Httpclient<br>HttpClient是Apache Jakarta Common下的子项目，用来提供高效的、最新的、功能丰富的支持HTTP协议的客户端编程工具包。<br>在爬虫方面简单粗暴的直接利用url，各种请求获取数据，上面介绍的两种方式也是对Httpclient进行了封装。<br>优点：简单粗暴，直接通过http形式获取数据<br>缺点：没有解析页面，在面对cookie认证的请求时需先获取到认证cookie，无法像htmlunit模拟执行页面操作（htmlunit模仿登录操作，登录成功后会保存认证的cookie、session等）。</p></li></ul><p>以上几种各有优缺点，推荐一起使用，Htmlunit&gt;Jsoup&gt;Httpclient。</p><h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>本章暂介绍博主工作上用到的相关爬虫，若有更好的也请各位指教，后续章节会讲解博主在实战中是如何使用的及一些小技巧。<br>注：后续相关爬虫技术均采用的Java语言，至于前些年大火的Python爬虫就不介绍。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据爬虫 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HtmlUnit </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>新的一年新的开始</title>
       <link href="/liwj.github.io/2021/03/15/one-title/"/>
       <url>/liwj.github.io/2021/03/15/one-title/</url>
