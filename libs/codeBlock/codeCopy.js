@@ -45,13 +45,14 @@ $(function () {
     }
     // 复制
     $('.code-area .fa-copy').on('click', function () {
-        var selection = window.getSelection()
-        var range = document.createRange()
-        range.selectNodeContents($(this).siblings('pre').find('code')[0])
-        selection.removeAllRanges()
-        selection.addRange(range)
-        var text = selection.toString()
-        copy(text, this)
-        selection.removeAllRanges()
+        var selection = window.getSelection();
+        var range = document.createRange();
+        range.selectNodeContents($(this).siblings('pre').find('code')[0]);
+		//range.selectNodeContents($(this).siblings('pre')[0]);
+        selection.removeAllRanges();
+        selection.addRange(range);
+        var text = selection.toString();
+        copy(text, this);
+        selection.removeAllRanges();
     })
 });
