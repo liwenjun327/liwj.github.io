@@ -470,21 +470,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-27
+                    2021-03-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 
@@ -525,19 +525,19 @@ webClient.closeAllWindows();<span aria-hidden="true" class="line-numbers-rows"><
 <li><strong>WebClient</strong><br>Web客户端实例，起始点，此类线程不安全，常用构造函数WebClient(BrowserVersion browserVersion)，指定浏览器创建客户端，详细请查阅<a target="_blank" rel="noopener" href="https://htmlunit.sourceforge.io/apidocs/com/gargoylesoftware/htmlunit/WebClient.html">API</a> ，此类提供了浏览器客户端的相关配置，如是否支持cookie、是否执行JavaScript等，下面放上我的WebClient配置供参考<pre class="line-numbers language-none"><code class="language-none">private void init(BrowserVersion browserVersion){
 	this.browser = new WebClient(browserVersion);
 	
-	if(this.webSiteId != null &amp;&amp; this.webSiteId.intValue() != 0L){//有指定站点的共用一个CookieManager
+	if(this.webSiteId != null &amp;&amp; this.webSiteId.intValue() != 0L){//根据业务需求添加cookie
 		this.browser.setCookieManager(CookieManagerHolder.getCookieManager(webSiteId));
 	}
 	
-	browser.getOptions().setCssEnabled(false);
+	browser.getOptions().setCssEnabled(false);				//是否加载css,无界面所以不加载
 	browser.getOptions().setTimeout(10*60*1000);
-	browser.getOptions().setJavaScriptEnabled(true);
+	browser.getOptions().setJavaScriptEnabled(true);		//是否加载js,建议开启
 	
-	browser.getCookieManager().setCookiesEnabled(true);//支持cookie
+	browser.getCookieManager().setCookiesEnabled(true);		//支持cookie
 	browser.getOptions().setThrowExceptionOnScriptError(false);  //解析js出错时不抛异常
 	browser.getOptions().setThrowExceptionOnFailingStatusCode(false);
-	browser.getOptions().setUseInsecureSSL(true); 
-	browser.getCache().setMaxSize(100);//默认好像是40，这里批缓存文件
+	browser.getOptions().setUseInsecureSSL(true); 					//支持请求https形式
+	browser.getCache().setMaxSize(100);//默认好像是40，这里批缓存文件，此处根据实际情况设置，因为有些网站缓存会导致一些意想不到的情况从而导致认证失败
 	//页面alter弹出框只打印日志
 	browser.setAlertHandler(new AlertHandler() {
 		//private static final long serialVersionUID = -4252009088789246842L;
@@ -549,10 +549,14 @@ webClient.closeAllWindows();<span aria-hidden="true" class="line-numbers-rows"><
 	});
 	
 	//确认框处理器,默认点击"确认",若有不同的作法请调用registerConfirmHandler设置
-	browser.setConfirmHandler(new GobalConfirmHandler());
-	//设置附件下载处理器
+	browser.setConfirmHandler(new GobalConfirmHandler());  //GobalConfirmHandler此处实现了ConfirmHandler接口，重写handleConfirm方法，返回true为确认反之取消。
+	/*
+	*设置附件下载处理器，此处GobalAttachmentHandler实现了AttachmentHandler接口，重写handleAttachment方法,
+	*在通过此方法入参Page对象获取流将之保存，代码：page.getWebResponse().getContentAsStream()获取流
+	*/
 	browser.setAttachmentHandler(new GobalAttachmentHandler(this));
 	
+	//执行ajax控制器，可打印日志用于调试等操作
 	browser.setAjaxController(new NicelyResynchronizingAjaxController(){
 		private static final long serialVersionUID = -360189032618131935L;
 
@@ -576,6 +580,7 @@ webClient.closeAllWindows();<span aria-hidden="true" class="line-numbers-rows"><
 		}
 	});
 	
+	//新增浏览器窗口监听，可打印日志查看HtmlUnit执行时打开、修改的窗口信息
 	browser.addWebWindowListener(new WebWindowListener() {
 		
 		@Override
@@ -610,6 +615,7 @@ webClient.closeAllWindows();<span aria-hidden="true" class="line-numbers-rows"><
 		}
 	});
 	
+	//HtmlUnit执行请求都会进入这，可打印日志用于查看调试，ajax请求到这后参数会消失所有最好还是在上面ajax控制器中也打印日志
 	HttpWebConnection conn = new HttpWebConnection(browser){
 		@Override
 		public com.gargoylesoftware.htmlunit.WebResponse getResponse(com.gargoylesoftware.htmlunit.WebRequest request) throws IOException {
@@ -686,11 +692,30 @@ webClient.closeAllWindows();<span aria-hidden="true" class="line-numbers-rows"><
 		}
 	};
 	browser.setWebConnection(conn);
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <ul>
-<li><strong>HtmlPage</strong><br>HTML页面的表示形式对象，通过WebClient.getPage方法获取，这个类提供了不同的方法来访问页面的内容，</li>
+<li><p><strong>HtmlPage（Page实现类）</strong><br>HTML页面的表示形式对象，通过WebClient.getPage方法获取，此类主要提供了不同的方法来访问页面的内容及触发元素事件等。<br>主要获取Html元素方法可通过指定id获取、指定tag名称查询、xPath方式查询<br>说明：下面page为HtmlPage对象</p>
+</li>
+<li><p>通过指定id获取<br>HtmlElement dom = page.getHtmlElementById(“id”);</p>
+</li>
+<li><p>指定tag名称查询<br>DomNodeList<domelement>  aList = page.getElementsByTagName(“a”);</domelement></p>
+</li>
+<li><p>xPath方式查询<br>HtmlInput fhStartTimeInput = page.getFirstByXPath(“//div[@widgetname=’发货开始时间’]/div[1]/input”);<br>xPath较为复杂，详细可查阅<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/xpath/xpath_syntax.asp">文档</a></p>
+</li>
 </ul>
+<p>HtmlUnit还提供了指定from名称获取的方式，这里就不叙述了，有兴趣的可以查阅资料</p>
+<ul>
+<li><strong>页面元素操作</strong><br>操作元素很简单，在上面我们获取到了元素，只需通过获取到的元素操作即可。<pre class="line-numbers language-java" data-language="java"><code class="language-java">//获取Input标签元素并设置value值，如下
+HtmlInput htmlInput = page.getFirstByXPath("//input[@id="userName"]");
+htmlInput.setValueAttribute("值");
+
+//获取button按钮触发点击事件
+HtmlButton button = (HtmlButton) page.getElementById("btnLogin");
+button.click();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+通过上面利用获取页面标签元素进行操作，我们就可以模拟出在浏览器界面操作效果。</li>
+</ul>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>暂时就先说到这吧，至于采集页面数据及登录认证等就放在后面章节吧，先将基础掌握才能支撑起我们后续的数据采集。</p>
 
                 
             </div>
@@ -1225,7 +1250,7 @@ webClient.closeAllWindows();<span aria-hidden="true" class="line-numbers-rows"><
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.6k</span>&nbsp;字
+                class="white-color">3.1k</span>&nbsp;字
             
             
             
