@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="网络数据爬虫简介, 李二狗的博客">
+    <meta name="keywords" content="数据爬虫实战（2）, 李二狗的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>网络数据爬虫简介 | 李二狗的博客</title>
+    <title>数据爬虫实战（2） | 李二狗的博客</title>
     <link rel="icon" type="image/png" href="/liwj.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/liwj.github.io/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/liwj.github.io/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/liwj.github.io/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">网络数据爬虫简介</h1>
+                    <h1 class="description center-align post-title">数据爬虫实战（2）</h1>
                 </div>
             </div>
         </div>
@@ -328,10 +328,104 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/liwj.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -369,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-25
+                    2021-04-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-26
+                    2021-04-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    616
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    6 分
                 </div>
                 
 
@@ -413,19 +507,137 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>最近工作上都忙于采集各系统的数据，所以也是在数据爬虫方面进行了学习，今天也是抽空出来记录下。</p>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>爬虫（程序）</strong>、<strong>自动化</strong>、<strong>抓取数据</strong>。<br>通俗的讲就是利用程序自动化获取想要的数据进行存储。</p>
-<h2 id="相关技术"><a href="#相关技术" class="headerlink" title="相关技术"></a>相关技术</h2><p>现在比较常见的有Jsoup、HtmlUnit、Httpclient等，以下简单介绍下。</p>
-<ul>
-<li><p>Jsoup<br>jsoup是一个用于处理真实HTML的Java库。它提供了一个非常方便的API，用于提取和操作数据，使用最好的DOM，CSS和类似jquery的方法。<br>优点：轻量级框架，静态页面Dom解析异常简单,操作也是时候简单，知道Jquery的使用基本就能快速上手。<br>缺点：只能解析静态网页，无法支持页面js。</p>
-</li>
-<li><p>HtmlUnit（强烈推荐）<br>HtmlUnit是一款java的无界面浏览器程序库，它为HTML文档建模，并提供一个API，使您可以调用页面，填写表单，单击链接等，就像在“常规”浏览器中一样。<br>它具有相当不错的JavaScript支持（正在不断改进），并且甚至可以与非常复杂的AJAX库一起工作，根据所使用的配置来模拟Chrome，Firefox或Internet Explorer。<br>优点：能执行JavaScript、AJAX解析，模仿点击页面操作完成一系列指令。<br>缺点：选择器有点难用，JavaScript容易报错。</p>
-</li>
-<li><p>Httpclient<br>HttpClient是Apache Jakarta Common下的子项目，用来提供高效的、最新的、功能丰富的支持HTTP协议的客户端编程工具包。<br>在爬虫方面简单粗暴的直接利用url，各种请求获取数据，上面介绍的两种方式也是对Httpclient进行了封装。<br>优点：简单粗暴，直接通过http形式获取数据<br>缺点：没有解析页面，在面对cookie认证的请求时需先获取到认证cookie，无法像htmlunit模拟执行页面操作（htmlunit模仿登录操作，登录成功后会保存认证的cookie、session等）。</p>
-</li>
+                <h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><p>上章节叙述了HtmlUnit的一些基础知识点及简单运用，这章开始利用这些知识去对网页进行数据爬取。</p>
+<h2 id="登录认证"><a href="#登录认证" class="headerlink" title="登录认证"></a>登录认证</h2><ul>
+<li><p>普通账号密码登录<br>这种是最简单的登录方式，完全可以直接用HtmlUnit去请求登录页面填入账号、密码后点击登录按钮完成。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">final WebClient webClient=new WebClient();	//这里简写，可以看上一章的配置，如执行js等
+final HtmlPage page=webClient.getPage("登录页面地址");
+Thread.sleep(1000L);//如果网页加载比较慢可以多等待些时间，也可以循环通过page对象去查找登录页面指定存在的元素，直到找到，最好限制下次数
+HtmlInput userName = page.getHtmlElementById("userName");
+HtmlInput password = page.getHtmlElementById("password");
+if(null==userName || null==password){
+	//查找指定元素失败
+	return;
+}
+userName.setValueAttribute("账号");
+password.setValueAttribute("密码");
+
+//找到登录按钮
+HtmlButton button = (HtmlButton) page.getElementById("btnLogin");
+button.click();
+HtmlPage newPage = (HtmlPage)webClient.getCurrentWindow().getEnclosedPage();
+Thread.sleep(1000L);
+//这里可以做个简单的登录判断，如果登录成功了页面会跳转到首页，可以通过获取到的新页面中是否还存在指定的内容判断
+if(!null==newPage.getHtmlElementById("userName")){
+	//登录失败
+}
+webClient.closeAllWindows();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>带图片验证码登录<br>这种其实也不难，只是多了个图片验证，代码跟上面大致相同，这里讲下思路，图片验证码一般都是后台生成，可以在页面上查看元素img的src请求，通过图片验证码的请求地址我们就能获取到图片了，网上有图片验证码解码工具，当然最简单的方式是肯定是人为辨别，所以为了方便，我们是可以写个性化登录页面的，像上面只有账号密码登录的这种，我们可以模拟写个相似页面，在页面中填好信息点击登录将输入的账号密码传到后台在用HtmlUnit请求页面设置值进行登录，图片验证码我们也可以直接写个img标签src改成我们后台请求，后台通过HtmlUnit去请求所需采集的网页图片验证码输入流到页面就可以展示了，通过HtmlUnit去请求是为了保持会话sessionId一致。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">/***
+*@userName 账号
+*@password 密码
+*@code 	   验证码
+*/
+public void codeLogin(String userName,String password,String code){
+	WebClient webClient = getWebClient();	
+	final HtmlPage page=webClient.getPage("登录页面地址");
+	Thread.sleep(1000L);//如果网页加载比较慢可以多等待些时间，也可以循环通过page对象去查找登录页面指定存在的元素，直到找到为止，最好限制下次数
+	HtmlInput userName = page.getHtmlElementById("userName");
+	HtmlInput password = page.getHtmlElementById("password");
+	HtmlInput imgCode = page.getHtmlElementById("imgCode");
+	if(null==userName || null==password){
+		//查找指定元素失败
+		return;
+	}
+	userName.setValueAttribute(userName);
+	password.setValueAttribute(password);
+	imgCode.setValueAttribute(code);
+	//找到登录按钮
+	HtmlButton button = (HtmlButton) page.getElementById("btnLogin");
+	button.click();
+	HtmlPage newPage = (HtmlPage)webClient.getCurrentWindow().getEnclosedPage();
+	Thread.sleep(1000L);
+	//这里可以做个简单的登录判断，如果登录成功了页面会跳转到首页，可以通过获取到的新页面中是否还存在指定的内容判断
+	if(!null==newPage.getHtmlElementById("userName")){
+		//登录失败
+	}
+	webClient.closeAllWindows();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>短信验证码登录<br>这种应该是最难的了，只能人为去验证登录，思路跟图片验证码差不多，自定义个性化页面，这里注意了，发送短信是需要点击才能发送且是要填写好账号密码才能成功，所以这里在自定义页面时需要注意给发送短信按钮自定义js事件，发送时检查是否填写好了账号密码，然后将账号密码传到后台赋值并触发发送短信按钮</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">/***
+*发送短信验证码
+*
+*
+*/
+public void sendSMS(String userName,String password){
+	WebClient webClient = getWebClient();	
+	final HtmlPage page=webClient.getPage("登录页面地址");
+	Thread.sleep(1000L);//如果网页加载比较慢可以多等待些时间，也可以循环通过page对象去查找登录页面指定存在的元素，直到找到为止，最好限制下次数
+	HtmlInput userName = page.getHtmlElementById("userName");
+	HtmlInput password = page.getHtmlElementById("password");
+
+	if(null==userName || null==password){
+		//查找指定元素失败
+		return;
+	}
+	userName.setValueAttribute(userName);
+	password.setValueAttribute(password);
+	
+	//找到发送短信按钮
+	HtmlButton button = (HtmlButton) page.getElementById("sendSms");
+	button.click();
+	Thread.sleep(1000L);
+	//webClient.closeAllWindows(); 这里不要在关闭了，webClient可以保存起来用于等下登录用
+	
+	webClientMap.put("key",webClient);	//保存浏览器客户端
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>发送短信验证码后手机上查收并填入自定义个性化页面短信验证码输入框中，在点击登录，后台获取到刚才的webClient继续将短信验证码值设置进去，在触发登录按钮事件完成登录</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">/***
+*短信验证码登录
+*
+*
+*/
+public void smsLogin(String smsCodeValue){
+	//拿到上面保存的浏览器客户端
+	WebClient webClient = webClientMap.get("key");	
+	//获取上次保存了的浏览器客户端当前页面
+	final HtmlPage page = webClient.getCurrentWindow().getEnclosedPage();	
+	HtmlInput smsCode = page.getHtmlElementById("smsCode");
+
+	if(null==smsCode){
+		//查找指定元素失败
+		return;
+	}
+	smsCode.setValueAttribute(smsCodeValue);
+	
+	//找到登录按钮
+	HtmlButton button = (HtmlButton) page.getElementById("btnLogin");
+	button.click();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
-<p>以上几种各有优缺点，推荐一起使用，Htmlunit&gt;Jsoup&gt;Httpclient。</p>
-<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>本章暂介绍博主工作上用到的相关爬虫，若有更好的也请各位指教，后续章节会讲解博主在实战中是如何使用的及一些小技巧。<br>注：后续相关爬虫技术均采用的Java语言，至于前些年大火的Python爬虫就不介绍。</p>
+<h2 id="保存会话"><a href="#保存会话" class="headerlink" title="保存会话"></a>保存会话</h2><p>上面图片验证码例子只是一个简写的思路，实际中我们是需要先用HtmlUnit去访问登录页面保存好浏览器客户端会话，然后在打开个性化页面去刷新图片验证码，保持浏览器会话一致，不然后执行Htmlunit访问登录页面图片验证码肯定是不对应的。</p>
+<p>像一般的网页隔一段时间不操作就会会话过期导致需要重新登录，所以我们可以在登录时保存客户端会话，然后通过定时任务去定时请求页面（如登录后的首页），这样就可以一直保存会话了。</p>
+<h2 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h2><p>数据爬虫其实难点就是认证，认证成功后我们就可以直接用HtmlUnit去请求获取数据的接口，或者拿到展示页面的dom进行解析，推荐找到前后端交互的数据接口，通过HtmlUnit去请求接口获取响应内容，根据返回内容进行解析入库</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public void getData(){
+	WebClient webClient = webClientMap.get("key");
+	//请求实体
+	WebRequest request = new WebRequest();		
+	//这里request参数省略，根据接口请自己定义请求方式、请求参数、请求编码、请求Url等
+	Page page = webClient.getPage(request);
+	//请求响应状态码
+	int statusCode = page.getWebResponse().getStatusCode();
+	
+	//获取响应内容有2种
+	//1.获取流
+	InputStream inputStream = page.getWebResponse().getContentAsStream();		
+	//2.获取流
+	String str = page.getWebResponse().getContentAsString(Charset.forName("utf-8"));
+	
+	//通过获取的内容进行解析
+	//入库等操作
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>上面都是简单的例子及思路，可能写的不是很详细，需对HtmlUnit进行了解及知道简单的使用才能更好理解，有些较为复杂的验证也还是需要花费大量时间去攻破的，博主工作中也是有遇到过一些棘手的，如请求头中携带Token，Htmlunit是没法自动实现添加的，所以需要我们在HtmlUnit请求时拦截下来进行设置（HttpWebConnection这个类中可以实现），要细说估计不是三言两语能讲完的了，如有疑惑可以通过添加qq或者邮箱询问。</p>
 
                 
             </div>
@@ -452,7 +664,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liwenjun327.github.io/liwj.github.io/2021/03/25/htmlunit1/">https://liwenjun327.github.io/liwj.github.io/2021/03/25/htmlunit1/</a>
+                    <a href="https://liwenjun327.github.io/liwj.github.io/2021/04/09/htmlunit3/">https://liwenjun327.github.io/liwj.github.io/2021/04/09/htmlunit3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -665,17 +877,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/liwj.github.io/2021/03/27/htmlunit2/">
+                <a href="/liwj.github.io/2021/04/09/htmlunit3/">
                     <div class="card-image">
                         
                         
-                        <img src="/liwj.github.io/medias/featureimages/7.jpg" class="responsive-img" alt="数据爬虫实战（1）">
+                        <img src="/liwj.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="数据爬虫实战（2）">
                         
-                        <span class="card-title">数据爬虫实战（1）</span>
+                        <span class="card-title">数据爬虫实战（2）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -685,9 +898,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -700,6 +913,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -722,12 +936,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liwj.github.io/2021/03/15/one-title/">
+                <a href="/liwj.github.io/2021/03/29/github-solves-the-wall/">
                     <div class="card-image">
                         
-                        <img src="/liwj.github.io/medias/featureimages/15.jpg" class="responsive-img" alt="新的一年新的开始">
                         
-                        <span class="card-title">新的一年新的开始</span>
+                        <img src="/liwj.github.io/medias/featureimages/10.jpg" class="responsive-img" alt="github访问失败解决">
+                        
+                        <span class="card-title">github访问失败解决</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -738,14 +953,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/liwj.github.io/categories/%E8%87%AA%E6%88%91%E6%84%9F%E6%82%9F/" class="post-category">
-                                    自我感悟
+                            <a href="/liwj.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="post-category">
+                                    经验分享
                                 </a>
                             
                             
@@ -755,8 +970,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/liwj.github.io/tags/%E8%87%AA%E7%9C%81/">
-                        <span class="chip bg-color">自省</span>
+                    <a href="/liwj.github.io/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">
+                        <span class="chip bg-color">经验分享</span>
                     </a>
                     
                 </div>
@@ -788,6 +1003,100 @@
 
 <script type="text/javascript" src="/liwj.github.io/libs/codeBlock/codeShrink.js"></script>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/liwj.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 

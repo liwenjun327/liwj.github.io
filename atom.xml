@@ -6,7 +6,7 @@
   <link href="https://liwenjun327.github.io/atom.xml" rel="self"/>
   
   <link href="https://liwenjun327.github.io/"/>
-  <updated>2021-03-29T08:50:55.880Z</updated>
+  <updated>2021-04-10T07:34:27.977Z</updated>
   <id>https://liwenjun327.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据爬虫实战（2）</title>
+    <link href="https://liwenjun327.github.io/2021/04/09/htmlunit3/"/>
+    <id>https://liwenjun327.github.io/2021/04/09/htmlunit3/</id>
+    <published>2021-04-09T06:31:47.000Z</published>
+    <updated>2021-04-10T07:34:27.977Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;回顾&quot;&gt;&lt;a href=&quot;#回顾&quot; class=&quot;headerlink&quot; title=&quot;回顾&quot;&gt;&lt;/a&gt;回顾&lt;/h2&gt;&lt;p&gt;上章节叙述了HtmlUnit的一些基础知识点及简单运用，这章开始利用这些知识去对网页进行数据爬取。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="数据爬虫" scheme="https://liwenjun327.github.io/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/"/>
+    
+    
+    <category term="HtmlUnit" scheme="https://liwenjun327.github.io/tags/HtmlUnit/"/>
+    
+    <category term="Java" scheme="https://liwenjun327.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>github访问失败解决</title>
