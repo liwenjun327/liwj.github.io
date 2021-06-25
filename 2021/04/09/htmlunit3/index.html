@@ -477,14 +477,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -508,7 +508,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><p>上章节叙述了HtmlUnit的一些基础知识点及简单运用，这章开始利用这些知识去对网页进行数据爬取。</p>
-<h2 id="登录认证"><a href="#登录认证" class="headerlink" title="登录认证"></a>登录认证</h2><ul>
+<h2 id="登录认证（重点）"><a href="#登录认证（重点）" class="headerlink" title="登录认证（重点）"></a>登录认证（重点）</h2><ul>
 <li><p>普通账号密码登录<br>这种是最简单的登录方式，完全可以直接用HtmlUnit去请求登录页面填入账号、密码后点击登录按钮完成。</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">final WebClient webClient=new WebClient();	//这里简写，可以看上一章的配置，如执行js等
 final HtmlPage page=webClient.getPage("登录页面地址");
@@ -633,9 +633,15 @@ public void smsLogin(String smsCodeValue){
 	//2.获取流
 	String str = page.getWebResponse().getContentAsString(Charset.forName("utf-8"));
 	
-	//通过获取的内容进行解析
+	//通过获取的内容进行解析（如json格式数据、xml格式数据等）
+	/**
+	*如果请求的是文件下载，WebClient.setAttachmentHandler()此处可以重写AttachmentHandler接口处理响应内容
+	*获取流将文件保存到本地
+	*然后解析文件
+	*/
+	
 	//入库等操作
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>上面都是简单的例子及思路，可能写的不是很详细，需对HtmlUnit进行了解及知道简单的使用才能更好理解，有些较为复杂的验证也还是需要花费大量时间去攻破的，博主工作中也是有遇到过一些棘手的，如请求头中携带Token，Htmlunit是没法自动实现添加的，所以需要我们在HtmlUnit请求时拦截下来进行设置（HttpWebConnection这个类中可以实现），要细说估计不是三言两语能讲完的了，如有疑惑可以通过添加qq或者邮箱询问。</p>
 
@@ -877,18 +883,17 @@ public void smsLogin(String smsCodeValue){
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/liwj.github.io/2021/04/09/htmlunit3/">
+                <a href="/liwj.github.io/2021/06/25/multithreading-01/">
                     <div class="card-image">
                         
                         
-                        <img src="/liwj.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="数据爬虫实战（2）">
+                        <img src="/liwj.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="线程基础">
                         
-                        <span class="card-title">数据爬虫实战（2）</span>
+                        <span class="card-title">线程基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -898,31 +903,30 @@ public void smsLogin(String smsCodeValue){
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-09
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-25
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/liwj.github.io/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/" class="post-category">
-                                    数据爬虫
+                            <a href="/liwj.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="post-category">
+                                    知识总结
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/liwj.github.io/tags/HtmlUnit/">
-                        <span class="chip bg-color">HtmlUnit</span>
-                    </a>
-                    
                     <a href="/liwj.github.io/tags/Java/">
                         <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/liwj.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                        <span class="chip bg-color">多线程</span>
                     </a>
                     
                 </div>
@@ -1174,7 +1178,7 @@ public void smsLogin(String smsCodeValue){
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.9k</span>&nbsp;字
+                class="white-color">5.7k</span>&nbsp;字
             
             
             
