@@ -29,9 +29,9 @@
 
     <script src="/liwj.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/liwj.github.io/atom.xml" title="李二狗的博客" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/liwj.github.io/atom.xml" title="李二狗的博客" type="application/atom+xml">
 <link rel="stylesheet" href="/liwj.github.io/css/prism.css" type="text/css"></head>
 
 
@@ -470,21 +470,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-25
+                    2021-06-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    739
+                    978
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -509,6 +509,20 @@
             <div id="articleContent">
                 <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>很久没更博客了，主要原因是觉得自己太菜了，没法把知识点更好的分析给大家，所以也是在埋头学习，打算以复习以前知识点及结合后续学习的技术作总结的方式书写博客。<br><img src="/liwj.github.io/images/multithreading/01-1.jpg"></p>
 <h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><p>在计算机中存在多个进程，而每个进程又可以存在多个线程，比如Java中main方法就是作为一个线程启动（JVM虚拟机就是进程哦），main方法中在创建其它线程启动就是当前进程中开辟新的线程。tomcat启动也是去找（org.apache.catalina.startup.Bootstrap类）main方法当主线程启动的。<br>进程与线程的关系：进程可以包含一个或多个线程，但至少会有一个线程。</p>
+<h2 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h2><ul>
+<li><p>1.新建状态(New)：线程对象被创建后，就进入了新建状态。</p>
+</li>
+<li><p>2.运行状态<br>（01）就绪状态(Runnable之ready)：也被称为“可执行状态”。线程对象被创建后，调用了start()方法时,此时该线程只是获得了资格运行，还需等待调度程序调用。<br>（02）运行状态(Running) : 线程获取CPU权限进行执行。需要注意的是，线程只能从就绪状态进入到运行状态。</p>
+</li>
+<li><p>3.阻塞状态(Blocked)： 阻塞状态是线程因为某种原因放弃CPU使用权，暂时停止运行。直到线程进入就绪状态，才有机会转到运行状态。阻塞的情况分三种：<br>(01) 等待阻塞 – 通过调用对象的wait()方法，让线程等待notify()/notifyAll()被调用。<br>(02) 同步阻塞 – 线程在获取synchronized同步锁失败（因为锁被其它线程所占用），它会进入同步阻塞状态。<br>(03) 其他阻塞 – 通过调用线程的sleep()或join()或发出了I/O请求时，线程会进入到其他阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入就绪状态。</p>
+</li>
+<li><p>4.等待(WAITING)：进入该状态的线程需要等待其他线程做出一些特定动作（通知或中断）。</p>
+</li>
+<li><p>5.超时等待(TIMED_WAITING)：该状态不同于WAITING，它可以在指定的时间后自行返回。</p>
+</li>
+<li><p>6.死亡状态(Dead)：线程执行完毕或者因异常退出了run()方法，该线程结束生命周期。<br><img src="/liwj.github.io/images/multithreading/01-2.jpg"></p>
+</li>
+</ul>
 <h2 id="线程的创建"><a href="#线程的创建" class="headerlink" title="线程的创建"></a>线程的创建</h2><p>通过实现Runnable接口并重写run()方法实现创建，</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">public class ThreadMain {
     public static void main(String[] args) {
@@ -524,20 +538,17 @@ class MyRunnable implements Runnable {
     }
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这里我只讲这一种创建方式，因为其它方式最终都是实现Runnable接口的run()方法，如通过Callable抽象类实现带返回值的线程最后也需通过FutureTask构造将其转换为Runable的”方法”。</p>
-<h2 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h2><ul>
-<li><p>1.新建状态(New)：线程对象被创建后，就进入了新建状态。</p>
+<h2 id="线程常用方法"><a href="#线程常用方法" class="headerlink" title="线程常用方法"></a>线程常用方法</h2><ul>
+<li><p>sleep()<br>主要的作用是让当前线程停止执行，把cpu让给其他线程执行，但不会释放对象锁和监控的状态，到了指定时间后线程又会自动恢复运行状态。</p>
 </li>
-<li><p>2.运行状态<br>（01）就绪状态(Runnable之ready)：也被称为“可执行状态”。线程对象被创建后，调用了start()方法时,此时该线程只是获得了资格运行，还需等待调度程序调用。<br>（02）运行状态(Running) : 线程获取CPU权限进行执行。需要注意的是，线程只能从就绪状态进入到运行状态。</p>
+<li><p>yield()<br>暂停当前方法，释放自己拥有的CPU，使线程进入就绪状态，进行CPU资源争夺。</p>
 </li>
-<li><p>3.阻塞状态(Blocked)： 阻塞状态是线程因为某种原因放弃CPU使用权，暂时停止运行。直到线程进入就绪状态，才有机会转到运行状态。阻塞的情况分三种：<br>(01) 等待阻塞 – 通过调用对象的wait()方法，让线程等待notify()/notifyAll()被调用。<br>(02) 同步阻塞 – 线程在获取synchronized同步锁失败（因为锁被其它线程所占用），它会进入同步阻塞状态。<br>(03) 其他阻塞 – 通过调用线程的sleep()或join()或发出了I/O请求时，线程会进入到其他阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入就绪状态。</p>
+<li><p>join()<br>当前线程调用A线程join()方法后，需等待A线程执行完成后才会执行。</p>
 </li>
-<li><p>4.等待(WAITING)：进入该状态的线程需要等待其他线程做出一些特定动作（通知或中断）。</p>
-</li>
-<li><p>5.超时等待(TIMED_WAITING)：该状态不同于WAITING，它可以在指定的时间后自行返回。</p>
-</li>
-<li><p>6.死亡状态(Dead)：线程执行完毕或者因异常退出了run()方法，该线程结束生命周期。<br><img src="/liwj.github.io/images/multithreading/01-2.jpg"></p>
+<li><p>interrupted()<br>主要用于中断线程，调用该方法会改变线程中断状态，但并不会停止线程，需在run()方法中将isInterrupted()方法做轮询条件进行判断是否中断了线程，切记给出轮询中断条件避免死循环。</p>
 </li>
 </ul>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这里只讲下一些基础使用及概念，后续会围绕实战中线程的使用进行讲解，锁的知识也会包含进去。</p>
 
                 
             </div>
@@ -1078,7 +1089,7 @@ class MyRunnable implements Runnable {
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.7k</span>&nbsp;字
+                class="white-color">6k</span>&nbsp;字
             
             
             
