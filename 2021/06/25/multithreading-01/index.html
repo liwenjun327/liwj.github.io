@@ -470,7 +470,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-28
+                    2021-06-29
                 </div>
                 
 
@@ -507,7 +507,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>很久没更博客了，主要原因是觉得自己太菜了，没法把知识点更好的分析给大家，所以也是在埋头学习，打算以复习以前知识点及结合后续学习的技术作总结的方式书写博客。<br><img src="/liwj.github.io/images/multithreading/01-1.jpg"></p>
+                <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>很久没更博客了，主要原因是觉得自己太菜了，没法把知识点更好的分析给大家，所以也是在埋头学习，打算以复习以前知识点及结合后续学习的技术作总结的方式书写博客。<br><img src="/images/multithreading/01-1.jpg"></p>
 <h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><p>在计算机中存在多个进程，而每个进程又可以存在多个线程，比如Java中main方法就是作为一个线程启动（JVM虚拟机就是进程哦），main方法中在创建其它线程启动就是当前进程中开辟新的线程。tomcat启动也是去找（org.apache.catalina.startup.Bootstrap类）main方法当主线程启动的。<br>进程与线程的关系：进程可以包含一个或多个线程，但至少会有一个线程。</p>
 <h2 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h2><ul>
 <li><p>1.新建状态(New)：线程对象被创建后，就进入了新建状态。</p>
@@ -520,7 +520,7 @@
 </li>
 <li><p>5.超时等待(TIMED_WAITING)：该状态不同于WAITING，它可以在指定的时间后自行返回。</p>
 </li>
-<li><p>6.死亡状态(Dead)：线程执行完毕或者因异常退出了run()方法，该线程结束生命周期。<br><img src="/liwj.github.io/images/multithreading/01-2.jpg"></p>
+<li><p>6.死亡状态(Dead)：线程执行完毕或者因异常退出了run()方法，该线程结束生命周期。<br><img src="/images/multithreading/01-2.jpg"></p>
 </li>
 </ul>
 <h2 id="线程的创建"><a href="#线程的创建" class="headerlink" title="线程的创建"></a>线程的创建</h2><p>通过实现Runnable接口并重写run()方法实现创建，</p>
