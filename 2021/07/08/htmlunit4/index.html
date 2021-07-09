@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="线程基础, 李二狗的博客">
+    <meta name="keywords" content="数据爬虫实战（3）, 李二狗的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>线程基础 | 李二狗的博客</title>
+    <title>数据爬虫实战（3） | 李二狗的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">线程基础</h1>
+                    <h1 class="description center-align post-title">数据爬虫实战（3）</h1>
                 </div>
             </div>
         </div>
@@ -434,12 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/HtmlUnit/">
+                                <span class="chip bg-color">HtmlUnit</span>
                             </a>
                         
-                            <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
-                                <span class="chip bg-color">多线程</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -450,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="post-category">
-                                知识总结
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/" class="post-category">
+                                数据爬虫
                             </a>
                         
                     </div>
@@ -463,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-25
+                    2021-07-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-29
+                    2021-07-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    978
+                    639
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -507,48 +507,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>很久没更博客了，主要原因是觉得自己太菜了，没法把知识点更好的分析给大家，所以也是在埋头学习，打算以复习以前知识点及结合后续学习的技术作总结的方式书写博客。<br><img src="/images/multithreading/01-1.jpg"></p>
-<h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><p>在计算机中存在多个进程，而每个进程又可以存在多个线程，比如Java中main方法就是作为一个线程启动（JVM虚拟机就是进程哦），main方法中在创建其它线程启动就是当前进程中开辟新的线程。tomcat启动也是去找（org.apache.catalina.startup.Bootstrap类）main方法当主线程启动的。<br>进程与线程的关系：进程可以包含一个或多个线程，但至少会有一个线程。</p>
-<h2 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h2><ul>
-<li><p>1.新建状态(New)：线程对象被创建后，就进入了新建状态。</p>
+                <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>上章爬虫实就战文章我们对需要进行登录认证的网站进行了讲解如何使用htmlunit进行登录认证，接下来就是数据采集了，这里就大概讲下思路吧，因为认证成功后其实就是简单的http请求，如有在采集中遇到困难可以私信，能帮到也是我的荣幸。</p>
+<h2 id="数据采集"><a href="#数据采集" class="headerlink" title="数据采集"></a>数据采集</h2><p>采集某个网站是需要对网站架构有一定了解才能更好的进行数据采集。<br>这里我将采集网站数据大概抽象为三点</p>
+<ul>
+<li><p>1.网站认证<br>首先我们给知道采集的网站是否需要登录认证，不用认证则可以直接进入下步数据源的获取，需要认证的我们则需通过<a href="/2021/05/05/htmlunit3/">实战（2）</a> 中进行登录认证获得凭证</p>
 </li>
-<li><p>2.运行状态<br>（01）就绪状态(Runnable之ready)：也被称为“可执行状态”。线程对象被创建后，调用了start()方法时,此时该线程只是获得了资格运行，还需等待调度程序调用。<br>（02）运行状态(Running) : 线程获取CPU权限进行执行。需要注意的是，线程只能从就绪状态进入到运行状态。</p>
+<li><p>2.数据源获取（这里一般指数据接口url）<br>网站页面上的数据一般都是来源于后台接口返回的，所以我们其实只需找到数据请求的url就能模拟请求获取到对应数据（一般都是json）;<br>如何定位到url，谷歌浏览器为例子，按F12打开开发人员工具，点击Network，如下图:<br><img src="/images/htmlunit/1.jpg"><br>在通过查看请求响应结果对比需要采集的数据判断<br><img src="/images/htmlunit/2.jpg"><br>请求结构<br><img src="/images/htmlunit/3.jpg"><br>贴张请求参数处理<br><img src="/images/htmlunit/4.jpg" alt="请求参数处理"><br>还有种比较粗暴且有局限的就是直接获取页面请求，通过htmlunit解析页面文本，遍历dom节点获取数据，但是现在主流的vue等框架生成的动态页面，htmlunit解析并不能完好的解析出来，所有这里就不过多讲解了。</p>
 </li>
-<li><p>3.阻塞状态(Blocked)： 阻塞状态是线程因为某种原因放弃CPU使用权，暂时停止运行。直到线程进入就绪状态，才有机会转到运行状态。阻塞的情况分三种：<br>(01) 等待阻塞 – 通过调用对象的wait()方法，让线程等待notify()/notifyAll()被调用。<br>(02) 同步阻塞 – 线程在获取synchronized同步锁失败（因为锁被其它线程所占用），它会进入同步阻塞状态。<br>(03) 其他阻塞 – 通过调用线程的sleep()或join()或发出了I/O请求时，线程会进入到其他阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入就绪状态。</p>
-</li>
-<li><p>4.等待(WAITING)：进入该状态的线程需要等待其他线程做出一些特定动作（通知或中断）。</p>
-</li>
-<li><p>5.超时等待(TIMED_WAITING)：该状态不同于WAITING，它可以在指定的时间后自行返回。</p>
-</li>
-<li><p>6.死亡状态(Dead)：线程执行完毕或者因异常退出了run()方法，该线程结束生命周期。<br><img src="/images/multithreading/01-2.jpg"></p>
+<li><p>3.数据解析<br>大多数接口返回的都是json，当然也有其它的如请求的是文件下载，那么就需要考虑请求响应时间问题等了，这里就需要随机应变了。</p>
 </li>
 </ul>
-<h2 id="线程的创建"><a href="#线程的创建" class="headerlink" title="线程的创建"></a>线程的创建</h2><p>通过实现Runnable接口并重写run()方法实现创建，</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class ThreadMain {
-    public static void main(String[] args) {
-        Thread t = new Thread(new MyRunnable());
-        t.start(); // 启动新线程
-    }
-}
-
-class MyRunnable implements Runnable {
-    @Override
-    public void run() {
-        System.out.println("启动新线程!!");
-    }
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这里我只讲这一种创建方式，因为其它方式最终都是实现Runnable接口的run()方法，如通过Callable抽象类实现带返回值的线程最后也需通过FutureTask构造将其转换为Runable的”方法”。</p>
-<h2 id="线程常用方法"><a href="#线程常用方法" class="headerlink" title="线程常用方法"></a>线程常用方法</h2><ul>
-<li><p>sleep()<br>主要的作用是让当前线程停止执行，把cpu让给其他线程执行，但不会释放对象锁和监控的状态，到了指定时间后线程又会自动恢复运行状态。</p>
-</li>
-<li><p>yield()<br>暂停当前方法，释放自己拥有的CPU，使线程进入就绪状态，进行CPU资源争夺。</p>
-</li>
-<li><p>join()<br>当前线程调用A线程join()方法后，需等待A线程执行完成后才会执行。</p>
-</li>
-<li><p>interrupted()<br>主要用于中断线程，调用该方法会改变线程中断状态，但并不会停止线程，需在run()方法中将isInterrupted()方法做轮询条件进行判断是否中断了线程，切记给出轮询中断条件避免死循环。</p>
-</li>
-</ul>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这里只讲下一些基础使用及概念，后续会围绕实战中线程的使用进行讲解，锁的知识也会包含进去。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>网站需要登录认证的推荐使用Htmlunit,因为它能模拟浏览器，所以我们能非常方便的进行登录认证然后获取认证后的Cookie进行请求。</p>
+<p>不需要登录认证的，其实完全可以直接使用HttpClient发起url请求去获取。</p>
+<p>采集数据前一定要先摸清楚网站的结构，采集过程中会遇到很多稀奇的问题，多通过谷歌浏览器查看网站请求携带的信息，请求头及Cookie多对比不同。</p>
 
                 
             </div>
@@ -575,7 +546,7 @@ class MyRunnable implements Runnable {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liwj.top/2021/06/25/multithreading-01/">https://liwj.top/2021/06/25/multithreading-01/</a>
+                    <a href="https://liwj.top/2021/07/08/htmlunit4/">https://liwj.top/2021/07/08/htmlunit4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -613,12 +584,12 @@ class MyRunnable implements Runnable {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/HtmlUnit/">
+                                    <span class="chip bg-color">HtmlUnit</span>
                                 </a>
                             
-                                <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
-                                    <span class="chip bg-color">多线程</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
                         </div>
@@ -1051,9 +1022,64 @@ class MyRunnable implements Runnable {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/07/08/htmlunit4/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="数据爬虫实战（3）">
+                        
+                        <span class="card-title">数据爬虫实战（3）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/" class="post-category">
+                                    数据爬虫
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/HtmlUnit/">
+                        <span class="chip bg-color">HtmlUnit</span>
+                    </a>
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/06/28/multithreading-02/">
                     <div class="card-image">
@@ -1071,9 +1097,9 @@ class MyRunnable implements Runnable {
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1095,59 +1121,6 @@ class MyRunnable implements Runnable {
                     
                     <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
                         <span class="chip bg-color">多线程</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/05/05/htmlunit3/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="数据爬虫实战（2）">
-                        
-                        <span class="card-title">数据爬虫实战（2）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/" class="post-category">
-                                    数据爬虫
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/HtmlUnit/">
-                        <span class="chip bg-color">HtmlUnit</span>
-                    </a>
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
