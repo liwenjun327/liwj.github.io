@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>多线程——ReadWriteLock</title>
+      <link href="2021/08/25/multithreading-04/"/>
+      <url>2021/08/25/multithreading-04/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上章介绍了Lock(实现类ReentrantLock)，但是synchronized本身存在如下缺点</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 知识总结 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 多线程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据爬虫实战（3）</title>
       <link href="2021/07/08/htmlunit4/"/>
       <url>2021/07/08/htmlunit4/</url>

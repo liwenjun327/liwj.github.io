@@ -6,7 +6,7 @@
   <link href="https://liwj.top/atom.xml" rel="self"/>
   
   <link href="https://liwj.top/"/>
-  <updated>2021-07-09T03:28:51.994Z</updated>
+  <updated>2021-08-25T09:23:25.813Z</updated>
   <id>https://liwj.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>多线程——ReadWriteLock</title>
+    <link href="https://liwj.top/2021/08/25/multithreading-04/"/>
+    <id>https://liwj.top/2021/08/25/multithreading-04/</id>
+    <published>2021-08-25T07:43:06.000Z</published>
+    <updated>2021-08-25T09:23:25.813Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识总结" scheme="https://liwj.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="Java" scheme="https://liwj.top/tags/Java/"/>
+    
+    <category term="多线程" scheme="https://liwj.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>数据爬虫实战（3）</title>
