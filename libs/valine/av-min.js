@@ -2075,7 +2075,6 @@
     "use strict";
 
     function r(t, e) {
-		//https://us-api.leancloud.cn
       if ("us" === e) return h("https://avoscloud.com");
       var n = void 0;
       switch (t.slice(-9)) {
