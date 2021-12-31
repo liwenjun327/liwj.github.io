@@ -3,11 +3,11 @@
   <title>李二狗的博客</title>
   
   <subtitle>李二狗</subtitle>
-  <link href="https://liwj.top/atom.xml" rel="self"/>
+  <link href="http://liwj.top/atom.xml" rel="self"/>
   
-  <link href="https://liwj.top/"/>
+  <link href="http://liwj.top/"/>
   <updated>2021-08-25T09:23:25.813Z</updated>
-  <id>https://liwj.top/</id>
+  <id>http://liwj.top/</id>
   
   <author>
     <name>Liwj</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>多线程——ReadWriteLock</title>
-    <link href="https://liwj.top/2021/08/25/multithreading-04/"/>
-    <id>https://liwj.top/2021/08/25/multithreading-04/</id>
+    <link href="http://liwj.top/2021/08/25/multithreading-04/"/>
+    <id>http://liwj.top/2021/08/25/multithreading-04/</id>
     <published>2021-08-25T07:43:06.000Z</published>
     <updated>2021-08-25T09:23:25.813Z</updated>
     
@@ -34,19 +34,19 @@
     
     
     
-    <category term="知识总结" scheme="https://liwj.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    <category term="知识总结" scheme="http://liwj.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
     
     
-    <category term="Java" scheme="https://liwj.top/tags/Java/"/>
+    <category term="Java" scheme="http://liwj.top/tags/Java/"/>
     
-    <category term="多线程" scheme="https://liwj.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <category term="多线程" scheme="http://liwj.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>数据爬虫实战（3）</title>
-    <link href="https://liwj.top/2021/07/08/htmlunit4/"/>
-    <id>https://liwj.top/2021/07/08/htmlunit4/</id>
+    <link href="http://liwj.top/2021/07/08/htmlunit4/"/>
+    <id>http://liwj.top/2021/07/08/htmlunit4/</id>
     <published>2021-07-08T02:34:24.000Z</published>
     <updated>2021-07-09T03:28:51.994Z</updated>
     
@@ -61,19 +61,19 @@
     
     
     
-    <category term="数据爬虫" scheme="https://liwj.top/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/"/>
+    <category term="数据爬虫" scheme="http://liwj.top/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/"/>
     
     
-    <category term="HtmlUnit" scheme="https://liwj.top/tags/HtmlUnit/"/>
+    <category term="HtmlUnit" scheme="http://liwj.top/tags/HtmlUnit/"/>
     
-    <category term="Java" scheme="https://liwj.top/tags/Java/"/>
+    <category term="Java" scheme="http://liwj.top/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>多线程——Lock</title>
-    <link href="https://liwj.top/2021/06/25/multithreading-03/"/>
-    <id>https://liwj.top/2021/06/25/multithreading-03/</id>
+    <link href="http://liwj.top/2021/06/25/multithreading-03/"/>
+    <id>http://liwj.top/2021/06/25/multithreading-03/</id>
     <published>2021-06-25T03:48:49.000Z</published>
     <updated>2021-08-19T10:16:26.305Z</updated>
     
@@ -88,19 +88,19 @@
     
     
     
-    <category term="知识总结" scheme="https://liwj.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    <category term="知识总结" scheme="http://liwj.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
     
     
-    <category term="Java" scheme="https://liwj.top/tags/Java/"/>
+    <category term="Java" scheme="http://liwj.top/tags/Java/"/>
     
-    <category term="多线程" scheme="https://liwj.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <category term="多线程" scheme="http://liwj.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>多线程——同步</title>
-    <link href="https://liwj.top/2021/06/15/multithreading-02/"/>
-    <id>https://liwj.top/2021/06/15/multithreading-02/</id>
+    <link href="http://liwj.top/2021/06/15/multithreading-02/"/>
+    <id>http://liwj.top/2021/06/15/multithreading-02/</id>
     <published>2021-06-15T06:30:45.000Z</published>
     <updated>2021-07-09T03:50:41.144Z</updated>
     
@@ -115,19 +115,19 @@
     
     
     
-    <category term="知识总结" scheme="https://liwj.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    <category term="知识总结" scheme="http://liwj.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
     
     
-    <category term="Java" scheme="https://liwj.top/tags/Java/"/>
+    <category term="Java" scheme="http://liwj.top/tags/Java/"/>
     
-    <category term="多线程" scheme="https://liwj.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <category term="多线程" scheme="http://liwj.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>线程基础</title>
-    <link href="https://liwj.top/2021/06/05/multithreading-01/"/>
-    <id>https://liwj.top/2021/06/05/multithreading-01/</id>
+    <link href="http://liwj.top/2021/06/05/multithreading-01/"/>
+    <id>http://liwj.top/2021/06/05/multithreading-01/</id>
     <published>2021-06-05T06:39:23.000Z</published>
     <updated>2021-07-09T03:50:31.000Z</updated>
     
@@ -142,19 +142,19 @@
     
     
     
-    <category term="知识总结" scheme="https://liwj.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    <category term="知识总结" scheme="http://liwj.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
     
     
-    <category term="Java" scheme="https://liwj.top/tags/Java/"/>
+    <category term="Java" scheme="http://liwj.top/tags/Java/"/>
     
-    <category term="多线程" scheme="https://liwj.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <category term="多线程" scheme="http://liwj.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>数据爬虫实战（2）</title>
-    <link href="https://liwj.top/2021/05/05/htmlunit3/"/>
-    <id>https://liwj.top/2021/05/05/htmlunit3/</id>
+    <link href="http://liwj.top/2021/05/05/htmlunit3/"/>
+    <id>http://liwj.top/2021/05/05/htmlunit3/</id>
     <published>2021-05-05T06:31:47.000Z</published>
     <updated>2021-07-08T02:31:22.590Z</updated>
     
@@ -170,19 +170,19 @@
     
     
     
-    <category term="数据爬虫" scheme="https://liwj.top/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/"/>
+    <category term="数据爬虫" scheme="http://liwj.top/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/"/>
     
     
-    <category term="HtmlUnit" scheme="https://liwj.top/tags/HtmlUnit/"/>
+    <category term="HtmlUnit" scheme="http://liwj.top/tags/HtmlUnit/"/>
     
-    <category term="Java" scheme="https://liwj.top/tags/Java/"/>
+    <category term="Java" scheme="http://liwj.top/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>数据爬虫实战（1）</title>
-    <link href="https://liwj.top/2021/04/30/htmlunit2/"/>
-    <id>https://liwj.top/2021/04/30/htmlunit2/</id>
+    <link href="http://liwj.top/2021/04/30/htmlunit2/"/>
+    <id>http://liwj.top/2021/04/30/htmlunit2/</id>
     <published>2021-04-30T03:34:45.000Z</published>
     <updated>2021-07-08T02:31:11.722Z</updated>
     
@@ -198,19 +198,19 @@
     
     
     
-    <category term="数据爬虫" scheme="https://liwj.top/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/"/>
+    <category term="数据爬虫" scheme="http://liwj.top/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/"/>
     
     
-    <category term="HtmlUnit" scheme="https://liwj.top/tags/HtmlUnit/"/>
+    <category term="HtmlUnit" scheme="http://liwj.top/tags/HtmlUnit/"/>
     
-    <category term="Java" scheme="https://liwj.top/tags/Java/"/>
+    <category term="Java" scheme="http://liwj.top/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>网络数据爬虫简介</title>
-    <link href="https://liwj.top/2021/04/25/htmlunit1/"/>
-    <id>https://liwj.top/2021/04/25/htmlunit1/</id>
+    <link href="http://liwj.top/2021/04/25/htmlunit1/"/>
+    <id>http://liwj.top/2021/04/25/htmlunit1/</id>
     <published>2021-04-25T10:10:16.000Z</published>
     <updated>2021-07-08T02:31:03.421Z</updated>
     
@@ -226,19 +226,19 @@
     
     
     
-    <category term="数据爬虫" scheme="https://liwj.top/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/"/>
+    <category term="数据爬虫" scheme="http://liwj.top/categories/%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/"/>
     
     
-    <category term="HtmlUnit" scheme="https://liwj.top/tags/HtmlUnit/"/>
+    <category term="HtmlUnit" scheme="http://liwj.top/tags/HtmlUnit/"/>
     
-    <category term="Java" scheme="https://liwj.top/tags/Java/"/>
+    <category term="Java" scheme="http://liwj.top/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>github访问失败解决</title>
-    <link href="https://liwj.top/2021/04/20/github-solves-the-wall/"/>
-    <id>https://liwj.top/2021/04/20/github-solves-the-wall/</id>
+    <link href="http://liwj.top/2021/04/20/github-solves-the-wall/"/>
+    <id>http://liwj.top/2021/04/20/github-solves-the-wall/</id>
     <published>2021-04-20T06:44:52.000Z</published>
     <updated>2021-07-08T02:30:52.996Z</updated>
     
@@ -253,17 +253,17 @@
     
     
     
-    <category term="经验分享" scheme="https://liwj.top/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    <category term="经验分享" scheme="http://liwj.top/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="经验分享" scheme="https://liwj.top/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    <category term="经验分享" scheme="http://liwj.top/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>新的一年新的开始</title>
-    <link href="https://liwj.top/2021/04/15/one-title/"/>
-    <id>https://liwj.top/2021/04/15/one-title/</id>
+    <link href="http://liwj.top/2021/04/15/one-title/"/>
+    <id>http://liwj.top/2021/04/15/one-title/</id>
     <published>2021-04-15T10:32:21.000Z</published>
     <updated>2021-07-08T02:30:44.223Z</updated>
     
@@ -279,10 +279,10 @@
     
     
     
-    <category term="自我感悟" scheme="https://liwj.top/categories/%E8%87%AA%E6%88%91%E6%84%9F%E6%82%9F/"/>
+    <category term="自我感悟" scheme="http://liwj.top/categories/%E8%87%AA%E6%88%91%E6%84%9F%E6%82%9F/"/>
     
     
-    <category term="自省" scheme="https://liwj.top/tags/%E8%87%AA%E7%9C%81/"/>
+    <category term="自省" scheme="http://liwj.top/tags/%E8%87%AA%E7%9C%81/"/>
     
   </entry>
   
